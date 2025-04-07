@@ -12,6 +12,7 @@ import web.service.UserService;
 
 
 @Controller
+@RequestMapping("/users")
 public class UserContoller{
 
     private final UserService userService;
