@@ -6,7 +6,6 @@
 </head>
 <body>
 <h1>Список пользователей</h1>
-
 <table border="1">
     <tr>
         <th>ID</th>
@@ -20,7 +19,7 @@
         <td th:text="${user.surname}"></td>
         <td>
             <form th:action="@{/users/edit}" method="get" style="display:inline;">
-                <input type="hidden" name="id" th:value="${user.id}" />
+                <input type="hidden" name="id" th:value="${user.id}"/>
                 <button type="submit">Редактировать</button>
             </form>
             <form th:action="@{/users/delete}" method="post" style="display:inline;">
@@ -30,6 +29,8 @@
         </td>
     </tr>
 </table>
+<br>
+<br>
 <form th:action="@{/users/add}" method="get" style="display:inline;">
     <button type="submit">Добавить нового пользователя</button>
 </form>

@@ -10,10 +10,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import web.service.UserService;
 
 
-
 @Controller
 @RequestMapping("/users")
-public class UserContoller{
+public class UserContoller {
 
     private final UserService userService;
 
@@ -21,8 +20,9 @@ public class UserContoller{
     public UserContoller(UserService userService) {
         this.userService = userService;
     }
+
     @GetMapping
-    public String showListUsers(Model model){
+    public String showListUsers(Model model) {
         model.addAttribute("users", userService.showUsers());
         return "users";
     }

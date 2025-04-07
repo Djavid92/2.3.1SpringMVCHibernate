@@ -39,6 +39,6 @@ public class UserDAOImpl implements UserDAO {
 
     @Override
     public User getUser(Long id) {
-       return entityManager.find(User.class, id);
+        return entityManager.find(User.class, id);
     }
 }
